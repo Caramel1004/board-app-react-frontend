@@ -1,0 +1,12 @@
+.container {
+    padding: 20px;
+    width: 60%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 250px 250px 250px;
+    grid-gap: 40px;
+    grid-auto-flow: row;
+    /* border: 1px groove rgba(0, 0, 0, 0.26); */
+}
+
