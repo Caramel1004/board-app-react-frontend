@@ -3,6 +3,7 @@ import axios from 'axios';
 import logo from '../../images/docker.png';
 import Post from '../../components/Post/Post.jsx'
 import './MainBoard.css';
+import { Link } from 'react-router-dom';
 
 export default function MainBoardPage(props) { // Renamed function
     const [posts, setPosts] = useState([]);
@@ -16,13 +17,14 @@ export default function MainBoardPage(props) { // Renamed function
                 console.error('Error fetching posts:', error);
             }
         }
-        
+
         fetchData();
-    },[]);
-    
+    }, []);
+
     return (
-        <header className="App-header">
+        <>
             <img src={logo} className="App-logo" alt="logo" />
+            <Link to={`/post/create`}>게시물 올리기</Link>
             <div className='container'>
                 {
                     posts.map(post => (
@@ -30,6 +32,6 @@ export default function MainBoardPage(props) { // Renamed function
                     ))
                 }
             </div>
-        </header>
+        </>
     );
 }
