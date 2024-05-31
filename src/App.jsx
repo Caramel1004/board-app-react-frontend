@@ -7,13 +7,15 @@ import PostAddPage from './pages/Post/PostAddPage.jsx';
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/post/:id" element={<PostDetailPage />} exact />
-                    <Route path="/" element={<MainBoardPage />} exact />
-                    <Route path="/post/create" element={<PostAddPage />} exact />
-                </Routes>
-            </BrowserRouter>
+            <header className="App-header">
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/post/:id" element={<PostDetailPage />} exact />
+                        <Route path="/" element={<MainBoardPage />} exact />
+                        <Route path="/post/create" element={<PostAddPage />} exact />
+                    </Routes>
+                </BrowserRouter>
+            </header>
         </div>
     );
 }
