@@ -23,9 +23,9 @@ export default function MainBoardPage(props) { // Renamed function
 
     return (
         <>
-            <img src={logo} className="App-logo" alt="logo" />
-            <Link to={`/post/create`}>게시물 올리기</Link>
-            <div className='container'>
+            {/* <img src={logo} className="App-logo" alt="logo" /> */}
+            <Link to={`/post/create`} className='button'> + </Link>
+            <div className='boards-container'>
                 {
                     posts.map(post => (
                         <Post key={post.id} post={post} />
