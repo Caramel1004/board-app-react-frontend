@@ -1,12 +1,23 @@
-.container {
+.boards-container {
+    margin-top: 1rem;
+    margin-bottom: 10rem;
     padding: 20px;
-    width: 60%;
+    width: 80%;
+    padding: 0;
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 250px 250px 250px;
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, 17rem);
+    grid-gap: 2rem;
     grid-auto-flow: row;
-    /* border: 1px groove rgba(0, 0, 0, 0.26); */
+    /* border: 1px groove rgba(0,0,0,0.26); */
+}
+
+.button {
+    padding: 10px 18px 12px 18px;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 2rem;
+    border: 0.5px groove #ffffff ;
 }
 
