@@ -1,21 +1,112 @@
-.card {
-    padding: 10px;
-    width: 250px;
-    border: 0.5px groove #ffffff;
-    border-radius: 1rem;
+.contents__div-wrapper {
+    /* padding: 5px; */
+    width: 17rem;
+    text-align: left;
+    display: inline-block;
+    /* justify-content: flex-end; */
+    border: 0.1px groove rgba(250, 247, 247, 0.26);
+    border-radius: 10px;
+    /* 박스 서서히 나타나기 */
+    animation: fadein 0.7s;
+    -webkit-animation: fadein 0.7s;
+    -moz-animation: fadein 0.7s;
+    text-decoration: none;
 }
 
-.card:hover,
-.card:active{
-    box-shadow: 0 0 8px #ffffff;
+.contents__div-wrapper:hover,
+.contents__div-wrapper:active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
     cursor: pointer;
 }
 
-.card h3 {
-    font-size: 20px;
+.contents__div-wrapper img {
+    padding: 0;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px groove rgba(157, 153, 153, 0.1);
 }
 
-.card img {
-    width: 250px;
-    height: 200px;
+/* card */
+.card {
+    padding: 15px 15px 0 15px;
+    /* border: 1px solid black; */
+}
+
+.card_2 {
+    padding: 10px 0 10px 15px;
+    /* border: 1px solid black; */
+}
+
+.card-summary {
+    padding: 0 0 0 15px;
+    color: #ffffff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    /* display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; */
+    text-decoration: none;
+    line-height: 1.55;
+    height: 3.5rem;
+    /* border: 1px solid black; */
+}
+.card-day {
+    padding: 0 0 1rem 13px;
+}
+.card-day span{
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.card-title {
+    font-size: 1.0625rem;
+    white-space: pre-wrap;
+    /* text-overflow: ellipsis; */
+    overflow-x: hidden;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.card-summary span {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #f4eeee;
+}
+
+.card span {
+    overflow-x: hidden;
+    /* color: #ffffff; */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
