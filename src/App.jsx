@@ -3,11 +3,13 @@ import './App.css';
 import MainBoardPage from './pages/MainBoard/MainBoardPage.jsx';
 import PostDetailPage from './pages/Post/PostDetailPage.jsx';
 import PostAddPage from './pages/Post/PostAddPage.jsx';
+import Header from './components/Header/Header.jsx';
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
+            <div className="App-header">
+                <Header />
                 <BrowserRouter>
                     <Routes>
                         <Route path="/post/:id" element={<PostDetailPage />} exact />
@@ -15,7 +17,7 @@ function App() {
                         <Route path="/post/create" element={<PostAddPage />} exact />
                     </Routes>
                 </BrowserRouter>
-            </header>
+            </div>
         </div>
     );
 }
